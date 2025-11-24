@@ -1,15 +1,30 @@
-# Claude Skills Collection
+# Droid Tings 🤖
 
-A comprehensive, curated collection of **375 skills** for Claude AI and Factory's Droid system. This repository aggregates the best skills from multiple sources into a single, well-organized collection ready for immediate use.
+A comprehensive, curated collection of **375 skills** and **155 custom droids** for Claude AI and Factory's Droid system. This repository aggregates the best skills and droids from multiple sources into a single, well-organized collection ready for immediate use.
 
 ## 📊 Collection Statistics
 
 - **Total Skills:** 375
+- **Total Droids:** 155
+- **Combined Resources:** 530
 - **Categories:** AI/ML, Development, Scientific Research, Business, Security, Design, and more
-- **Sources:** 15+ open-source repositories
-- **Format:** Factory-compatible SKILL.md with YAML frontmatter
+- **Sources:** 15+ open-source repositories + personal custom droids
+- **Format:** Factory-compatible SKILL.md and droid .md files
 
 ## 🎯 What's Included
+
+### 🎪 Custom Droids (155 droids)
+Autonomous AI agents with specialized expertise:
+- **Languages:** Python, TypeScript, Rust, Go, Java, C++, Ruby, Elixir, Scala, PHP, and more
+- **AI/ML Specialists:** Prompt engineers, MLOps, model training, inference optimization
+- **Architecture:** System architects, database architects, cloud architects, Kubernetes experts
+- **Security:** Blue team, red team, security coders, compliance experts
+- **Business:** Content marketing, sales automation, customer support, business analysis
+- **Scientific:** Fixed star astrology, harmonic mathematics, temporal analysis
+- **Quality & Compliance:** ISO 13485, ISO 27001, FDA, GDPR, MDR specialists
+- **DevOps:** CI/CD, infrastructure, observability, incident response
+- **Frontend/Backend:** Senior engineers for all major stacks
+- **Data:** Data engineers, data scientists, analytics specialists
 
 ### AI & Machine Learning (80+ skills)
 - **LLM Frameworks:** LangChain, LlamaIndex, DSPy, Guidance, Instructor
@@ -58,11 +73,11 @@ A comprehensive, curated collection of **375 skills** for Claude AI and Factory'
 
 1. **Clone this repository:**
    ```bash
-   git clone https://github.com/ovachiever/claude-skills-collection.git
-   cd claude-skills-collection
+   git clone https://github.com/ovachiever/droid-tings.git
+   cd droid-tings
    ```
 
-2. **Copy skills to your Factory configuration:**
+2. **Install skills:**
    ```bash
    # For project-specific skills
    cp -r skills/* .factory/skills/
@@ -71,20 +86,35 @@ A comprehensive, curated collection of **375 skills** for Claude AI and Factory'
    cp -r skills/* ~/.factory/skills/
    ```
 
-3. **Restart your Droid:**
+3. **Install custom droids:**
    ```bash
-   # Factory will automatically detect new skills
+   # For project-specific droids
+   cp droids/* .factory/droids/
+
+   # For personal droids (available across all projects)
+   cp droids/* ~/.factory/droids/
    ```
 
-### Using Individual Skills
+4. **Restart your Droid:**
+   ```bash
+   # Factory will automatically detect new skills and droids
+   ```
 
-Each skill is self-contained in its own directory with:
+### Using Individual Skills & Droids
+
+**Skills** are self-contained in their own directories with:
 - `SKILL.md` - Main skill definition with YAML frontmatter
 - Supporting files (if needed) - References, examples, templates
 
-### Browsing Skills
+**Droids** are autonomous agents defined as:
+- `.md` files with configuration and instructions
+- Model selection, tool access, and autonomy levels
+- Specialized expertise and domain knowledge
 
-See [SKILLS_INDEX.md](SKILLS_INDEX.md) for a complete categorized list of all skills.
+### Browsing the Collection
+
+- **Skills:** Browse the `skills/` directory (375 skills organized alphabetically)
+- **Droids:** Browse the `droids/` directory (155 custom droids)
 
 ## 📚 Documentation
 
