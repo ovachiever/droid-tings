@@ -1,0 +1,12 @@
+{
+  "name": "typescript-mcp",
+  "description": "Build stateless MCP servers with TypeScript on Cloudflare Workers using @modelcontextprotocol/sdk. Provides patterns for tools, resources, prompts, and authentication (API keys, OAuth, Zero Trust). Use when exposing APIs to LLMs, integrating Cloudflare services (D1, KV, R2, Vectorize), or troubleshooting export syntax errors, unclosed transport leaks, or CORS misconfigurations.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Jeremy Dawes",
+    "email": "jeremy@jezweb.net"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/jezweb/claude-skills",
+  "keywords": []
+}

@@ -1,0 +1,12 @@
+{
+  "name": "claude-agent-sdk",
+  "description": "Build autonomous AI agents with Claude Agent SDK. Create multi-step reasoning workflows, orchestrate subagents, integrate MCP servers. Use when: building coding agents, SRE systems, security auditors, code review bots, or troubleshooting CLI not found, context length exceeded errors.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Jeremy Dawes",
+    "email": "jeremy@jezweb.net"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/jezweb/claude-skills",
+  "keywords": []
+}

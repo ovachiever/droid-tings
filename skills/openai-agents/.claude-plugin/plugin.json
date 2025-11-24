@@ -1,0 +1,12 @@
+{
+  "name": "openai-agents",
+  "description": "Build AI applications with OpenAI Agents SDK - text agents, voice agents (realtime), multi-agent workflows with handoffs, tools with Zod schemas, input/output guardrails, structured outputs, and streaming. Deploy to Cloudflare Workers, Next.js, or React with human-in-the-loop patterns. Use when: building text-based agents with tools and Zod schemas, creating realtime voice agents with WebRTC/WebSocket, implementing multi-agent workflows with handoffs between specialists, setting up input/output ",
+  "version": "1.0.0",
+  "author": {
+    "name": "Jeremy Dawes",
+    "email": "jeremy@jezweb.net"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/jezweb/claude-skills",
+  "keywords": []
+}

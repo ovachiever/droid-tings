@@ -1,0 +1,70 @@
+# Code Owners
+#
+# This file defines who should review PRs that modify specific files/directories.
+# GitHub automatically requests reviews from code owners when a PR touches their files.
+#
+# Format: path/to/file @username @team-name
+# More specific patterns take precedence over less specific ones.
+#
+# Documentation: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owners for everything in the repo
+# These owners will be requested for review unless a more specific rule below applies
+* @jezweb
+
+# Documentation
+*.md @jezweb
+/docs/ @jezweb
+
+# Configuration files
+*.yml @jezweb
+*.yaml @jezweb
+*.json @jezweb
+*.toml @jezweb
+wrangler.jsonc @jezweb
+package.json @jezweb
+tsconfig.json @jezweb
+
+# GitHub workflows
+/.github/ @jezweb
+
+# Source code
+/src/ @jezweb
+
+# Tests
+/test/ @jezweb
+/tests/ @jezweb
+/**/*.test.ts @jezweb
+/**/*.spec.ts @jezweb
+
+# Build configuration
+vite.config.ts @jezweb
+webpack.config.js @jezweb
+rollup.config.js @jezweb
+
+# Security-sensitive files
+SECURITY.md @jezweb
+/scripts/ @jezweb
+
+# Database migrations (require extra scrutiny)
+/migrations/ @jezweb
+/prisma/ @jezweb
+/drizzle/ @jezweb
+
+# Dependencies (notify when packages change)
+package-lock.json @jezweb
+pnpm-lock.yaml @jezweb
+yarn.lock @jezweb
+requirements.txt @jezweb
+Gemfile.lock @jezweb
+
+# CI/CD
+/.github/workflows/ @jezweb
+/scripts/deploy.sh @jezweb
+
+# Examples (multiple owners can review)
+# /frontend/ @frontend-team @jezweb
+# /backend/ @backend-team @jezweb
+# /api/ @api-team @backend-team
+# *.css @design-team
+# *.scss @design-team

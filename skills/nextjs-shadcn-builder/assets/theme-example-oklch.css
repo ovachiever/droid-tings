@@ -1,0 +1,199 @@
+/**
+ * Example Theme using OKLCH Color Space
+ *
+ * OKLCH (OKLab Lightness Chroma Hue) is a perceptually uniform color space
+ * that provides better color accuracy and consistency than HSL.
+ *
+ * Benefits of OKLCH:
+ * - Perceptually uniform (equal changes = equal perceived differences)
+ * - Better gradient interpolation
+ * - More predictable lightness
+ * - Better for accessibility (more accurate contrast)
+ *
+ * Format: oklch(L C H / alpha)
+ * - L (Lightness): 0-1 (0 = black, 1 = white)
+ * - C (Chroma): 0-0.4+ (0 = grayscale, higher = more saturated)
+ * - H (Hue): 0-360 degrees
+ * - alpha: 0-1 or percentage (optional)
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Border radius for components */
+    --radius: 0.65rem;
+
+    /* Base colors */
+    --background: oklch(1 0 0);                      /* Pure white */
+    --foreground: oklch(0.141 0.005 285.823);       /* Very dark blue-gray */
+
+    /* Card component colors */
+    --card: oklch(1 0 0);                            /* White */
+    --card-foreground: oklch(0.141 0.005 285.823);  /* Dark blue-gray */
+
+    /* Popover colors */
+    --popover: oklch(1 0 0);                         /* White */
+    --popover-foreground: oklch(0.141 0.005 285.823); /* Dark blue-gray */
+
+    /* Primary brand color (orange/amber) */
+    --primary: oklch(0.646 0.222 41.116);           /* Warm orange */
+    --primary-foreground: oklch(0.98 0.016 73.684); /* Nearly white with slight warmth */
+
+    /* Secondary colors (light purple-gray) */
+    --secondary: oklch(0.967 0.001 286.375);        /* Very light purple-gray */
+    --secondary-foreground: oklch(0.21 0.006 285.885); /* Dark purple-gray */
+
+    /* Muted colors for subtle elements */
+    --muted: oklch(0.967 0.001 286.375);            /* Very light purple-gray */
+    --muted-foreground: oklch(0.552 0.016 285.938); /* Medium gray */
+
+    /* Accent colors */
+    --accent: oklch(0.967 0.001 286.375);           /* Very light purple-gray */
+    --accent-foreground: oklch(0.21 0.006 285.885); /* Dark purple-gray */
+
+    /* Destructive/danger colors (red) */
+    --destructive: oklch(0.577 0.245 27.325);       /* Red */
+
+    /* Border and input colors */
+    --border: oklch(0.92 0.004 286.32);             /* Light gray border */
+    --input: oklch(0.92 0.004 286.32);              /* Light gray input border */
+
+    /* Focus ring color */
+    --ring: oklch(0.75 0.183 55.934);               /* Yellowish focus ring */
+
+    /* Chart colors (warm palette) */
+    --chart-1: oklch(0.837 0.128 66.29);            /* Light yellow */
+    --chart-2: oklch(0.705 0.213 47.604);           /* Medium orange */
+    --chart-3: oklch(0.646 0.222 41.116);           /* Primary orange */
+    --chart-4: oklch(0.553 0.195 38.402);           /* Darker orange */
+    --chart-5: oklch(0.47 0.157 37.304);            /* Deep orange */
+
+    /* Sidebar specific colors */
+    --sidebar: oklch(0.985 0 0);                    /* Off-white sidebar background */
+    --sidebar-foreground: oklch(0.141 0.005 285.823); /* Dark text */
+    --sidebar-primary: oklch(0.646 0.222 41.116);   /* Orange for active items */
+    --sidebar-primary-foreground: oklch(0.98 0.016 73.684); /* Light text on orange */
+    --sidebar-accent: oklch(0.967 0.001 286.375);   /* Light gray for hover states */
+    --sidebar-accent-foreground: oklch(0.21 0.006 285.885); /* Dark text */
+    --sidebar-border: oklch(0.92 0.004 286.32);     /* Border color */
+    --sidebar-ring: oklch(0.75 0.183 55.934);       /* Focus ring */
+  }
+
+  .dark {
+    /* Dark mode base colors */
+    --background: oklch(0.141 0.005 285.823);       /* Very dark blue-gray */
+    --foreground: oklch(0.985 0 0);                 /* Off-white */
+
+    /* Dark mode card colors */
+    --card: oklch(0.21 0.006 285.885);              /* Dark purple-gray */
+    --card-foreground: oklch(0.985 0 0);            /* Off-white */
+
+    /* Dark mode popover colors */
+    --popover: oklch(0.21 0.006 285.885);           /* Dark purple-gray */
+    --popover-foreground: oklch(0.985 0 0);         /* Off-white */
+
+    /* Dark mode primary (brighter orange for contrast) */
+    --primary: oklch(0.705 0.213 47.604);           /* Brighter orange */
+    --primary-foreground: oklch(0.98 0.016 73.684); /* Nearly white */
+
+    /* Dark mode secondary */
+    --secondary: oklch(0.274 0.006 286.033);        /* Medium dark gray */
+    --secondary-foreground: oklch(0.985 0 0);       /* Off-white */
+
+    /* Dark mode muted */
+    --muted: oklch(0.274 0.006 286.033);            /* Medium dark gray */
+    --muted-foreground: oklch(0.705 0.015 286.067); /* Light gray */
+
+    /* Dark mode accent */
+    --accent: oklch(0.274 0.006 286.033);           /* Medium dark gray */
+    --accent-foreground: oklch(0.985 0 0);          /* Off-white */
+
+    /* Dark mode destructive (slightly darker red) */
+    --destructive: oklch(0.704 0.191 22.216);       /* Dark mode red */
+
+    /* Dark mode borders (with alpha for transparency) */
+    --border: oklch(1 0 0 / 10%);                   /* 10% white overlay */
+    --input: oklch(1 0 0 / 15%);                    /* 15% white overlay */
+
+    /* Dark mode focus ring */
+    --ring: oklch(0.408 0.123 38.172);              /* Darker orange ring */
+
+    /* Chart colors (same in both modes for consistency) */
+    --chart-1: oklch(0.837 0.128 66.29);
+    --chart-2: oklch(0.705 0.213 47.604);
+    --chart-3: oklch(0.646 0.222 41.116);
+    --chart-4: oklch(0.553 0.195 38.402);
+    --chart-5: oklch(0.47 0.157 37.304);
+
+    /* Dark mode sidebar */
+    --sidebar: oklch(0.21 0.006 285.885);           /* Dark sidebar */
+    --sidebar-foreground: oklch(0.985 0 0);         /* Light text */
+    --sidebar-primary: oklch(0.705 0.213 47.604);   /* Brighter orange */
+    --sidebar-primary-foreground: oklch(0.98 0.016 73.684);
+    --sidebar-accent: oklch(0.274 0.006 286.033);   /* Medium dark for hover */
+    --sidebar-accent-foreground: oklch(0.985 0 0);
+    --sidebar-border: oklch(1 0 0 / 10%);           /* 10% white border */
+    --sidebar-ring: oklch(0.408 0.123 38.172);      /* Darker orange ring */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/**
+ * Usage Examples:
+ *
+ * 1. Background colors:
+ *    <div className="bg-background">Default background</div>
+ *    <div className="bg-card">Card background</div>
+ *    <div className="bg-primary">Primary brand color</div>
+ *
+ * 2. Text colors:
+ *    <p className="text-foreground">Default text</p>
+ *    <p className="text-muted-foreground">Muted text</p>
+ *    <p className="text-primary-foreground">Text on primary</p>
+ *
+ * 3. Borders:
+ *    <div className="border border-border">With border</div>
+ *    <input className="border-input" />
+ *
+ * 4. Using in custom CSS:
+ *    .custom-class {
+ *      background-color: oklch(var(--primary));
+ *      color: oklch(var(--primary-foreground));
+ *    }
+ *
+ * 5. Chart colors:
+ *    <AreaChart
+ *      data={data}
+ *      categories={["sales", "revenue"]}
+ *      colors={["chart-1", "chart-2"]}
+ *    />
+ */
+
+/**
+ * Converting from hex to OKLCH:
+ *
+ * Use online tools or color libraries:
+ * - https://oklch.com
+ * - https://colorjs.io
+ * - culori (npm package)
+ *
+ * Example conversion:
+ * #FF6B35 (orange) → oklch(0.646 0.222 41.116)
+ * #3B82F6 (blue)   → oklch(0.630 0.213 255.5)
+ * #10B981 (green)  → oklch(0.710 0.180 165.4)
+ *
+ * OKLCH provides better perceptual uniformity than HSL,
+ * especially important for gradients and color scales.
+ */

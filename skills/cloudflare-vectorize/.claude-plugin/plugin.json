@@ -1,0 +1,12 @@
+{
+  "name": "cloudflare-vectorize",
+  "description": "Build semantic search and RAG applications with Cloudflare Vectorize, a globally distributed vector database. Supports Workers AI and OpenAI embeddings, metadata filtering with 10 indexes, and namespace partitioning. Use when: creating vector indexes, querying embeddings, implementing semantic search or RAG, configuring metadata filters, or troubleshooting dimension mismatches, metadata index timing, insert vs upsert confusion, or filter syntax errors.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Jeremy Dawes",
+    "email": "jeremy@jezweb.net"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/jezweb/claude-skills",
+  "keywords": ["vectorize","vector database","vector index","vector search","similarity search","semantic search","nearest neighbor","knn search","ann search","RAG","retrieval augmented generation","chat with data","document search","semantic Q&A","context retrieval"]
+}
