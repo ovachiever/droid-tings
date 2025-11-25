@@ -6,10 +6,11 @@ A comprehensive, curated collection of **375 skills** and **155 custom droids** 
 
 - **Total Skills:** 375
 - **Total Droids:** 155
-- **Combined Resources:** 530
+- **Total Commands:** 2
+- **Combined Resources:** 532
 - **Categories:** AI/ML, Development, Scientific Research, Business, Security, Design, and more
 - **Sources:** 15+ open-source repositories + personal custom droids
-- **Format:** Factory-compatible SKILL.md and droid .md files
+- **Format:** Factory-compatible SKILL.md, droid .md, and command .md files
 
 ## 🎯 What's Included
 
@@ -25,6 +26,21 @@ Autonomous AI agents with specialized expertise:
 - **DevOps:** CI/CD, infrastructure, observability, incident response
 - **Frontend/Backend:** Senior engineers for all major stacks
 - **Data:** Data engineers, data scientists, analytics specialists
+
+### 🎮 Custom Commands (2 commands)
+Reusable workflow commands for common tasks:
+- **start** - Comprehensive project onboarding briefing for any codebase
+  - Systematic analysis using project-onboarding-briefer droid
+  - Complete system overview, architecture layers, data flow visualization
+  - Git evolution analysis, code statistics, quality validation
+  - Professional assessment with ratings and enhancement recommendations
+  - Phased onboarding roadmap for new team members
+- **understand** - "Understand First, Implement Once" (UFIO) methodology
+  - Requirements extraction and validation before coding
+  - Multi-solution approach generation with trade-off analysis
+  - Detailed implementation planning with approval gates
+  - Single-session execution for first-time success
+  - Comprehensive verification and rollback procedures
 
 ### AI & Machine Learning (80+ skills)
 - **LLM Frameworks:** LangChain, LlamaIndex, DSPy, Guidance, Instructor
@@ -95,12 +111,21 @@ Autonomous AI agents with specialized expertise:
    cp droids/* ~/.factory/droids/
    ```
 
-4. **Restart your Droid:**
+4. **Install custom commands:**
    ```bash
-   # Factory will automatically detect new skills and droids
+   # For project-specific commands
+   cp commands/* .factory/commands/
+
+   # For personal commands (available across all projects)
+   cp commands/* ~/.factory/commands/
    ```
 
-### Using Individual Skills & Droids
+5. **Restart your Droid:**
+   ```bash
+   # Factory will automatically detect new skills, droids, and commands
+   ```
+
+### Using Individual Skills, Droids & Commands
 
 **Skills** are self-contained in their own directories with:
 - `SKILL.md` - Main skill definition with YAML frontmatter
@@ -111,10 +136,17 @@ Autonomous AI agents with specialized expertise:
 - Model selection, tool access, and autonomy levels
 - Specialized expertise and domain knowledge
 
+**Commands** are reusable workflow templates:
+- `.md` files with YAML frontmatter and detailed instructions
+- Can be invoked by name with optional arguments
+- Combine multiple droids and tools into cohesive workflows
+- Usage: `/command-name [optional-arguments]`
+
 ### Browsing the Collection
 
 - **Skills:** Browse the `skills/` directory (375 skills organized alphabetically)
 - **Droids:** Browse the `droids/` directory (155 custom droids)
+- **Commands:** Browse the `commands/` directory (2 workflow commands)
 
 ## 📚 Documentation
 
